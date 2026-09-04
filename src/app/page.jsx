@@ -1,5 +1,5 @@
 "use client";
-import { X, Flower2, Sparkles, Flower, Sparkle } from "lucide-react";
+import {  Sparkles } from "lucide-react";
 import { useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/ProductCard";
@@ -8,19 +8,18 @@ import { productos } from "@/data/productos";
 export default function HomeMenuPage() {
   const [categoriaActiva, setCategoriaActiva] = useState("Todos");
 
-  // Memorizamos las categorías para evitar recalcular en cada render
   const categorias = useMemo(() => {
     return ["Todos", ...new Set(productos.map((p) => p.categoria))];
   }, []);
 
-  // Filtrado optimizado de productos
+  
   const productosFiltrados = useMemo(() => {
     if (categoriaActiva === "Todos") return productos;
     return productos.filter((producto) => producto.categoria === categoriaActiva);
   }, [categoriaActiva]);
 
   return (
-    <main className="min-h-screen bg-nails-champagne pb-40">
+    <main className="min-h-screen bg-juliana-gray pb-20">
       <Navbar />
 
       <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
@@ -31,7 +30,7 @@ export default function HomeMenuPage() {
             ¡Nuestros
           </span>
           <h1 className="font-title text-6xl text-juliana leading-none flex items-center">
-            {/* El texto de la H1 */}
+            
             <span>Servicios!</span>
             
             <Sparkles 

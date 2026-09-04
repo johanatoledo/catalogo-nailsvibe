@@ -44,11 +44,19 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.icon-a {
+  color: white;
+  font-size: 1rem;
+}
+.icon-a:hover {
+   color: #D4AF37;
+  font-size: 1.5rem;
+}
 
 img {
   display: block;
   max-width: 100%;
-  user-select: none;
+  user-select: none; 
 }
 
 
@@ -150,9 +158,8 @@ button:disabled {
   border-radius:1rem ; 
 
   /* Fondo elegante */
-  background: var(--color-nails-champagne, #FFFDF7);
-
-  border: 1px solid rgba(196, 137, 13, 0.25);
+  background:  #FFFDF7;
+ border: 5px solid rgba(230, 0, 103, 0.50);
 
   box-shadow: 0 4px 20px -2px rgba(94, 75, 60, 0.08);
 
@@ -163,9 +170,8 @@ button:disabled {
 }
 .juliana-product-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(196, 137, 13, 0.6); 
   box-shadow: 0 10px 25px -4px rgba(94, 75, 60, 0.15);
-  border: 5px solid rgba(196, 137, 13, 0.25);
+  border: 5px solid rgba(230, 0, 103);
 }
 
 .juliana-product-image-overlay {
@@ -178,6 +184,7 @@ button:disabled {
       rgb(0 0 0 / 0.18),
       transparent 45%
     );
+    
 }
 
 
@@ -244,27 +251,6 @@ button:disabled {
     0 8px 16px rgb(0 0 0 / 0.05);
 }
 
-/* ===== GLASS EFFECT ===== */
-
-.juliana-glass {
-  background: rgb(255 255 255 / 0.75);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-
-/* ===== SOMBRAS ===== */
-
-.juliana-shadow {
-  box-shadow:
-    0 10px 25px rgb(0 0 0 / 0.06),
-    0 4px 10px rgb(0 0 0 / 0.04);
-}
-
-.juliana-shadow-lg {
-  box-shadow:
-    0 20px 40px rgb(0 0 0 / 0.10),
-    0 10px 20px rgb(0 0 0 / 0.06);
-}
 
 /* ===== ANIMACIONES ===== */
 
@@ -284,26 +270,7 @@ button:disabled {
   }
 }
 
-/* ===== BADGES ===== */
 
-.juliana-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 999px;
-
-  background: var(--color-nails-caramelo);
-
-  padding: 0.55rem 1rem;
-
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-
-  color: var(--color-nails-white);
-}
 
 /* ===== TITULOS ===== */
 
@@ -318,51 +285,7 @@ button:disabled {
   line-height: 1.7;
 }
 .juliana-precio{
-  color: var(--color-nails-caramelo);
+  color: var(--color-juliana-black);
 }
 
 
-/* ===== BOTONES ===== */
-
-.juliana-button-primary {
-  border-radius: 1rem;
-
-  background: var(--color-nails-caramelo);
-
-  padding: 0.95rem 1.4rem;
-
-  font-weight: 900;
-  color: var(--color-black-chic);
-
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-.juliana-button-primary:hover {
-  background: var(--color-nails-gold);
-  transform: translateY(-2px);
-}
-
-.juliana-button-secondary {
-  border-radius: 1rem;
-
-  background: var(--color-nails-white);
-
-  padding: 0.9rem 1.2rem;
-
-  font-weight: 800;
-
-  color: var(--color-nails-black);
-
-  border: 1px solid var(--color-nails-caramelo);
-
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.juliana-button-secondary:hover {
-  background: var(--color-nails-white);
-  border-color: var(--color-nails-caramelo);
-}

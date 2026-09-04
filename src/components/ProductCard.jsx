@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
+
 
 export default function ProductCard({ producto, cantidad = 0,}) {
   const whatsappNumber = "51932297805"; 
@@ -8,9 +8,9 @@ export default function ProductCard({ producto, cantidad = 0,}) {
   const montoReserva = (Number(producto.precio) * 0.20).toFixed(2);
 
   const mensajeCustom = `¡Hola! Me gustaría agendar una cita para el servicio:
-✨ *${producto.nombre}*
-💰 *Precio total:* S/ ${precioTotal}
-💳 *Monto de reserva (20%):* S/ ${montoReserva}
+ *${producto.nombre}*
+ *Precio total:* S/ ${precioTotal}
+ *Monto de reserva (20%):* S/ ${montoReserva}
 
 ¿Tienen disponibilidad de horarios?`;
 
@@ -23,7 +23,7 @@ export default function ProductCard({ producto, cantidad = 0,}) {
       src={producto.imagen}
       alt={producto.nombre}
       fill
-      className="object-cover transition-transform duration-700 group-hover:scale-110"
+      className="object-cover transition-transform  duration-700 group-hover:scale-110"
       sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,50vw"
     />
 
@@ -35,7 +35,7 @@ export default function ProductCard({ producto, cantidad = 0,}) {
       {producto.nombre}
     </h3>
    <span className="font-bold">INCLUYE:</span>
-    <p className="mt-3 min-h-14 text-sm text-aline-justify leading-relaxed text-gray-600">
+    <p className="mt-3 min-h-14 text-sm text-aline-justify leading-relaxed text-juliana-gray-900">
       {producto.descripcion}
     </p>
 
@@ -52,15 +52,15 @@ export default function ProductCard({ producto, cantidad = 0,}) {
 
       {/* Monto de Reserva (20%) */}
       <div className="flex items-center justify-between font-semibold">
-       <span className="text-xs text-nails-black">RESERVA (20%):
-        <p className="text-base text-nails-brown font-bold">
+       <span className="text-xs text-juliana-gray">RESERVA (20%):
+        <p className="text-base text-juliana-gold font-bold">
           S/ {(Number(producto.precio) * 0.20).toFixed(2)}
        </p>
        </span>
        
   </div>
 
-     <a
+         <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
