@@ -1,17 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-nails-brown: #7f6244;
-  --color-nails-black: #000000;
-  --color-nails-yellow: #fff1b0;
-  --color-nails-white: #fffdf7;
-  --color-nails-caramelo:#C4890D;
-  --color-nails-gold:#8C5A18;
-  --color-nails-champagne:#F5EBE6;
-  --font-title: var(--font-cormorant);
+  --color-juliana:#ff66c4;
+  --color-juliana-pink: #E60067;
+  --color-juliana-black: #000000;
+  --color-juliana-white: #FAFAFA;
+  --color-juliana-gold:#D4AF37;
+  --color-juliana-gray:#2B2B2B;
+  --color-juliana-aqua:#2ff3e0;
+  --font-title: var(--font-juliana);
+  --font-slogan:var(--font-juliana-slogan);
   --font-body: var(--font-jakarta);
-  
-  
 
 }
 
@@ -32,7 +31,7 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: var(--color-nails-white);
+  background-color: var(--color-juliana-gray);
   
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -45,10 +44,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.icon-whatsapp {
-  color: green;
-  font-size: 1.5rem;
-}
 
 img {
   display: block;
@@ -56,12 +51,6 @@ img {
   user-select: none;
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
 
 button {
   cursor: pointer;
@@ -74,39 +63,24 @@ button:disabled {
   opacity: 0.7;
 }
 
-input,
-textarea,
-select {
-  outline: none;
-}
 
 /* ===== SELECTION ===== */
 
-::selection {
-  background: var(--color-nails-caramelo);
-  color: var(--color-nails-white);
-}
-.nails-container {
+.juliana-container {
   width: min(100% - 1.5rem, 1320px);
   margin-inline: auto;
 }
 /* ===== ESTILOS PARA BOTONES DE LAS CATEGORIAS ===== */
-.nails-category-button-container {
-  color:var(--color-nails-brown);
-  background-color: var(--color-nails-champagne);
-  opacity: 0.75;
-  border-color: var(--color-nails-brown);
-  
-  
-}
 
-.nails-category-button {
-  border-radius: 999px;
-  padding: 0.65rem 1.25rem;
-  font-size: 0.72rem;
+.juliana-category-button {
+  background: transparent;
+  border: none;                  
+  border-bottom: 2px solid #D4AF37; 
+  padding-bottom: 4px;        
+  font-size: 0.75rem;
   font-weight: 900;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
+  letter-spacing: 0.18em;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -114,25 +88,33 @@ select {
     color 0.25s ease;
 }
 
-.nails-category-button:hover {
+.juliana-category-button:hover {
   transform: translateY(-2px);
+  color:var(--color-juliana-white);
 }
 
-.nails-category-button-active {
+.juliana-category-button-active {
+  background: transparent;
+  border: none;                 
+  border-bottom: 2px solid #2ff3e0;
+  padding-bottom: 4px;          
   background: var(--color-nails-brown);
   color: white;
-  box-shadow: 0 12px 24px rgb(0 0 0 / 0.10);
+ 
 }
 
-.nails-category-button-inactive {
-  background: #fffaf5;
-  color: var(--color-nails-brown);
+.juliana-category-button-inactive {
+   background: transparent;
+   color: var(--color-juliana-white);
+    border-bottom: 2px solid #D4AF37;
   
 }
 
-.nails-category-button-inactive:hover {
-  background: var(--color-nails-brown);
-  color: var(--color-nails-yellow);
+.juliana-category-button-inactive:hover {
+  background: transparent;
+  color: var(--color-juliana-white);
+  border-bottom: 2px solid #2ff3e0;
+
   box-shadow: 0 8px 18px rgb(0 0 0 / 0.07);
 }
 /* ===== SCROLLBAR ===== */
@@ -143,20 +125,20 @@ select {
 }
 
 ::-webkit-scrollbar-track {
-  background: #efe3d8;
+  background: var(--color-juliana-white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-nails-brown);
+  background: var(--color-juliana);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-nails-brown);
+  background: var(--color-juliana-pink);
 }
 
 /* ===== ESTILOS TARJETAS ===== */
-.nails-product-card {
+.juliana-product-card {
   overflow: hidden;
   
   max-width: 320px;
@@ -179,14 +161,14 @@ select {
               box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               border-color 0.3s ease;
 }
-.nails-product-card:hover {
+.juliana-product-card:hover {
   transform: translateY(-4px);
   border-color: rgba(196, 137, 13, 0.6); 
   box-shadow: 0 10px 25px -4px rgba(94, 75, 60, 0.15);
   border: 5px solid rgba(196, 137, 13, 0.25);
 }
 
-.nails-product-image-overlay {
+.juliana-product-image-overlay {
   position: absolute;
   inset: 0;
 
@@ -200,29 +182,29 @@ select {
 
 
 
-.nails-product-price {
+.juliana-product-price {
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: -0.04em;
 
-  color: var(--color-nails-black);
+  color: var(--color-juliana-black);
 }
 
-.nails-button-add {
+.juliana-button-add {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
 
   border-radius: 1rem;
 
-  background: var(--color-nails-brown);
+  background: var(--color-juliana);
 
   padding: 0.8rem;
 
   font-size: 0.82rem;
   font-weight: 700;
 
-  color: var(--color-nails-white);
+  color: var(--color-juliana-white);
 
   transition:
     transform 0.25s ease,
@@ -230,99 +212,32 @@ select {
     box-shadow 0.25s ease;
 }
 
-.nails-button-add:hover {
+.juliana-button-add:hover {
   transform: translateY(-2px);
 
-  background: var(--color-nails-brown);
+  background: var(--color-juliana-pink);
 
   box-shadow:
     0 12px 24px rgb(92 61 46 / 0.18);
 }
 
-.nails-button-remove {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 
-  border-radius: 1rem;
-
-  background: var(--color-nails-caramelo);
-
-  padding: 0.8rem 1rem;
-
-  font-size: 0.82rem;
-  font-weight: 900;
-
-  color: var(--color-nails-white);
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
-}
-
-.nails-button-remove:hover {
-  transform: translateY(-2px);
-
-  background: var(--color-nails-caramelo);
-}
-
-/* ===== ESTILOS CALENDARIO ===== */
-.nails-icon-calendar{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 999px;
-  padding: 0.45rem 0.9rem;
-  color: var(--color-nails-caramelo);
-}
-
-.nails-button-calendar {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  border-radius: 1rem;
-
-  background: var(--color-nails-gold);
-
-  padding: 0.8rem 1rem;
-
-  font-size: 0.82rem;
-  font-weight: 900;
-
-  color: var(--color-nails-white);
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.nails-button-calendar:hover {
-  transform: translateY(-2px);
-
-  background: var(--color-nails-caramelo);
-
-  box-shadow:
-    0 12px 24px rgb(92 61 46 / 0.18);
-}
 /* ===== UTILIDADES ===== */
 
 @media (min-width: 768px) {
-  .nails-container {
+  .juliana-container {
     width: min(100% - 3rem, 1320px);
   }
 }
 
-.nails-card-hover {
+.juliana-card-hover {
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
     border-color 0.35s ease;
 }
 
-.nails-card-hover:hover {
+.juliana-card-hover:hover {
   transform: translateY(-6px);
   box-shadow:
     0 20px 40px rgb(0 0 0 / 0.08),
@@ -331,7 +246,7 @@ select {
 
 /* ===== GLASS EFFECT ===== */
 
-.nails-glass {
+.juliana-glass {
   background: rgb(255 255 255 / 0.75);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -339,13 +254,13 @@ select {
 
 /* ===== SOMBRAS ===== */
 
-.nails-shadow {
+.juliana-shadow {
   box-shadow:
     0 10px 25px rgb(0 0 0 / 0.06),
     0 4px 10px rgb(0 0 0 / 0.04);
 }
 
-.nails-shadow-lg {
+.juliana-shadow-lg {
   box-shadow:
     0 20px 40px rgb(0 0 0 / 0.10),
     0 10px 20px rgb(0 0 0 / 0.06);
@@ -353,11 +268,11 @@ select {
 
 /* ===== ANIMACIONES ===== */
 
-.nails-fade-in {
+.juliana-fade-in {
   animation: nailsFadeIn 0.4s ease;
 }
 
-@keyframes nailsFadeIn {
+@keyframes julianaFadeIn {
   from {
     opacity: 0;
     transform: translateY(12px);
@@ -371,7 +286,7 @@ select {
 
 /* ===== BADGES ===== */
 
-.nails-badge {
+.juliana-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -392,47 +307,24 @@ select {
 
 /* ===== TITULOS ===== */
 
-.nails-title {
+.juliana-title {
   font-weight: 900;
   letter-spacing: -0.04em;
   color: var(--color-nails-black);
 }
 
-.nails-subtitle {
+.juliana-subtitle {
   color: var(--color-nails-black);
   line-height: 1.7;
 }
-.nails-precio{
+.juliana-precio{
   color: var(--color-nails-caramelo);
 }
 
-/* ===== INPUTS ===== */
-
-.nails-input {
-  width: 100%;
-
-  border-radius: 1rem;
-  border: 2px solid var(--color-nails-gold);
-
-  background: var(--color-nails-white);
-
-  padding: 0.9rem 1rem;
-
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.nails-input:focus {
-  border-color: var(--color-nails-caramelo);
-
-  box-shadow:
-    0 0 0 4px rgb(201 123 54 / 0.10);
-}
 
 /* ===== BOTONES ===== */
 
-.nails-button-primary {
+.juliana-button-primary {
   border-radius: 1rem;
 
   background: var(--color-nails-caramelo);
@@ -447,12 +339,12 @@ select {
     transform 0.25s ease;
 }
 
-.nails-button-primary:hover {
+.juliana-button-primary:hover {
   background: var(--color-nails-gold);
   transform: translateY(-2px);
 }
 
-.nails-button-secondary {
+.juliana-button-secondary {
   border-radius: 1rem;
 
   background: var(--color-nails-white);
@@ -470,7 +362,7 @@ select {
     border-color 0.25s ease;
 }
 
-.nails-button-secondary:hover {
+.juliana-button-secondary:hover {
   background: var(--color-nails-white);
   border-color: var(--color-nails-caramelo);
 }

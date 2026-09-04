@@ -3,14 +3,21 @@ import { ArrowLeft } from "lucide-react";
 
 export default function ProductCard({ producto, cantidad = 0,}) {
   const whatsappNumber = "51932297805"; 
-  const defaultMessage = encodeURIComponent(
-    "¡Hola! Me gustaría obtener información sobre los servicios de Nails Vibe."
-  );
   
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
+  const precioTotal = Number(producto.precio).toFixed(2);
+  const montoReserva = (Number(producto.precio) * 0.20).toFixed(2);
+
+  const mensajeCustom = `¡Hola! Me gustaría agendar una cita para el servicio:
+✨ *${producto.nombre}*
+💰 *Precio total:* S/ ${precioTotal}
+💳 *Monto de reserva (20%):* S/ ${montoReserva}
+
+¿Tienen disponibilidad de horarios?`;
+
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensajeCustom)}`;
   
   return (
-    <article className="group nails-product-card nails-fade-in">
+    <article className="group juliana-product-card juliana-fade-in">
   <div className="relative h-60 w-full overflow-hidden ">
     <Image
       src={producto.imagen}
@@ -20,11 +27,11 @@ export default function ProductCard({ producto, cantidad = 0,}) {
       sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,50vw"
     />
 
-    <div className="nails-product-image-overlay" />
+    <div className="juliana-product-image-overlay" />
   </div>
 
   <div className="p-2">
-    <h3 className="mt-4 nails-title text-xl">
+    <h3 className="mt-4 juliana-title text-xl">
       {producto.nombre}
     </h3>
    <span className="font-bold">INCLUYE:</span>
@@ -36,7 +43,7 @@ export default function ProductCard({ producto, cantidad = 0,}) {
       {/* Precio Total del Servicio */}
       <div className="flex items-center justify-between">
        <span className="text-xs font-bold">PRECIO TOTAL: 
-        <p className="nails-product-price text-sm  opacity-80">
+        <p className="juliana-product-price text-sm  opacity-80">
            S/ {Number(producto.precio).toFixed(2)}
           </p>
           </span>
@@ -53,23 +60,17 @@ export default function ProductCard({ producto, cantidad = 0,}) {
        
   </div>
 
-    
-        <button
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nails-button-add"
-        >
-          Agendar
-        </button>
+     <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="juliana-button-add inline-flex items-center justify-center "
+          >
+            Agendar
+          </a>
       
     </div>
 
-    {cantidad > 0 && (
-      <p className="mt-4 text-sm font-black text-green-700">
-        Seleccionaste: {cantidad}. {producto.nombre} 
-      </p>
-    )}
   </div>
 </article>
   );

@@ -5,7 +5,7 @@ export const productos = [
     descripcion:
       "Exfoliación profunda. Masaje relajante. Hidratación intensiva. Eliminación de células muertas y suavizado de la piel de los pies.",
     precio: 25,
-    categoria: "exfoliacion",
+    categoria: "Exfoliacion",
     imagen: "/images/exfoliacionpies.png",
   },
   {
@@ -14,7 +14,7 @@ export const productos = [
     descripcion:
       "Exfoliación profunda con parafina. Eliminacion de células muertas. Masaje relajante. Hidratación intensiva. Suavizado de la piel de las manos.",
     precio: 25,
-    categoria: "exfoliacion",
+    categoria: "Exfoliacion",
     imagen: "/images/parafina.png",
   },
   {
@@ -23,7 +23,7 @@ export const productos = [
     descripcion:
       "Manicura y pedicura completa con esmalte semipermanente. Limado. Cutículas, masaje y aplicación de esmalte duradero.",
     precio: 45,
-    categoria: "Manicura semipermanente",
+    categoria: "Manicura Semipermanente",
     imagen: "/images/manicuraypedi.png",
   },
   {
@@ -32,7 +32,7 @@ export const productos = [
     descripcion:
       "Preparación de uñas.Diseño personalizado.Aplicación de acrílico y decoración según tus preferencias.",
     precio: 70,
-    categoria: "Uñas acrílicas",
+    categoria: "Uñas Acrílicas",
     imagen: "/images/unaslunares.png",
   },
   {
@@ -41,7 +41,7 @@ export const productos = [
     descripcion:
       "Preparación de uñas. Aplicación de gel y decoración creativa según tus gustos.",
     precio: 10.0,
-    categoria: "Uñas de gel",
+    categoria: "Uñas en gel",
     imagen: "/images/unascerezas.png",
   },
 
@@ -70,7 +70,7 @@ export const productos = [
     descripcion:
       "Uñas con efecto cromo, que incluye preparación de uñas, aplicación de esmalte y acabado brillante y reflectante.",
     precio: 120,
-    categoria: "Uñas efecto cromo",
+    categoria: "Uñas Acrilicas",
     imagen: "/images/unasmetalizadas.png",
   },
   {
@@ -99,7 +99,7 @@ export const productos = [
     descripcion:
       "Incluye preparación de uñas, aplicación de esmalte y decoración creativa según tus preferencias.",
     precio: 90,
-    categoria: "Uñas acrílicas",
+    categoria: "Uñas Acrílicas",
     imagen: "/images/unaslunares.png",
   },
   {
@@ -108,7 +108,7 @@ export const productos = [
     descripcion:
       "Preparación de uñas, aplicación de esmalte y acabado profesional y natural.",
     precio: 50,
-    categoria: "Manicura semipermanente",
+    categoria: "Manicura Semipermanente",
     imagen: "/images/unasbasicas.png",
   },
   {
@@ -117,7 +117,7 @@ export const productos = [
     descripcion:
       "Preparación de uñas, aplicación de esmalte y decoración creativa según tus preferencias hasta 4 colores a escoger.",
     precio: 90,
-    categoria: "Uñas acrílicas",
+    categoria: "Uñas Acrílicas",
     imagen: "/images/unaslunaresnegro.png",
   },
   {
@@ -126,7 +126,7 @@ export const productos = [
     descripcion:
       "Mas de 100 modelos de diseño. Preparación de uñas, aplicación de esmalte y decoración creativa según tus preferencias.",
     precio: 120,
-    categoria: "Jelly Nails",
+    categoria: "Nail Art",
     imagen: "/images/unascerezas.png",
   },
   {

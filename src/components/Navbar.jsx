@@ -1,29 +1,49 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
-
 
 export default function Navbar() {
-  
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setShowNavbar(false);
+      } else {
+        
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="sticky top-0 z-30   bg-nails-champagne/80 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
-        <Link href="/" >
+    <header
+      className={`relative  w-full z-10 bg-juliana-gray/60 backdrop-blur-md transition-transform duration-400 ease-in-out ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <nav className="mx-auto flex max-w-4xl items-center justify-center px-8 py-8">
+        <Link href="/">
           <Image
-             src="/branding/logonails.png"
-             alt="Nails Vibe"
-             width={200}
-             height={200}
-             className="object-contain rounded-full "
+            src="/branding/julianalogo.png"
+            alt="Logo Juliana"
+            width={300}
+            height={300}
+            className="object-contain rounded-full transition-all duration-300 hover:scale-105"
+            priority
           />
         </Link>
-
-        <div className="flex items-center gap-4 text-sm ">
-
-        
-        
-
-        </div>
       </nav>
     </header>
   );

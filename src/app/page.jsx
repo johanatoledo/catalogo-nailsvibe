@@ -1,75 +1,80 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { X, Flower2, Sparkles, Flower, Sparkle } from "lucide-react";
+import { useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/ProductCard";
 import { productos } from "@/data/productos";
 
 export default function HomeMenuPage() {
   const [categoriaActiva, setCategoriaActiva] = useState("Todos");
-  
 
-  const categorias = [
-    "Todos",
-    ...new Set(productos.map((p) => p.categoria)),
-  ];
+  // Memorizamos las categorías para evitar recalcular en cada render
+  const categorias = useMemo(() => {
+    return ["Todos", ...new Set(productos.map((p) => p.categoria))];
+  }, []);
 
-  const productosFiltrados =
-    categoriaActiva === "Todos"
-      ? productos
-      : productos.filter(
-          (producto) => producto.categoria === categoriaActiva
-        );
-
-  const total = carrito.reduce(
-    (acc, item) => acc + item.precio * item.cantidad,
-    0
-  );
+  // Filtrado optimizado de productos
+  const productosFiltrados = useMemo(() => {
+    if (categoriaActiva === "Todos") return productos;
+    return productos.filter((producto) => producto.categoria === categoriaActiva);
+  }, [categoriaActiva]);
 
   return (
     <main className="min-h-screen bg-nails-champagne pb-40">
       <Navbar />
 
-      <section className="mx-auto w-full max-w-10xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-        <div className="text-center">
-            <h1 className="--font-title text-6xl text-nails-brown font-bold">
-              ¡NUESTROS SERVICIOS!
-            </h1>
+      <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
         
+      <div className="text-center flex justify-center">
+        <div className="flex items-end gap-1.5 ">
+          <span className="font-title text-6xl text-juliana block">
+            ¡Nuestros
+          </span>
+          <h1 className="font-title text-6xl text-juliana leading-none flex items-center">
+            {/* El texto de la H1 */}
+            <span>Servicios!</span>
+            
+            <Sparkles 
+              className="w-6 h-6 ml-2 text-juliana-gold opacity-80" 
+              strokeWidth={2}
+            />
+          </h1>
+          
         </div>
 
-       <div className="mt-8 flex flex-wrap justify-center gap-3">
-           {categorias.map((categoria) => {
+      </div>
+
+        {/* Botones de Categorías */}
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          {categorias.map((categoria) => {
             const activa = categoriaActiva === categoria;
 
-             return (
+            return (
               <button
-               key={categoria}
-               onClick={() => setCategoriaActiva(categoria)}
-               className={`nails-category-button ${
-               activa
-               ? "nails-category-button-active"
-               : "nails-category-button-inactive"
-             }`}
-          >
-            {categoria}
-         </button>
-        );
-      })}
-     </div>
+                key={categoria}
+                onClick={() => setCategoriaActiva(categoria)}
+                className={`juliana-category-button   ${
+                  activa
+                    ? "juliana-category-button-active"
+                    : "juliana-category-button-inactive"
+                }`}
+              >
+                {categoria}
+              </button>
+            );
+          })}
+        </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* Grilla de Servicios */}
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {productosFiltrados.map((producto) => (
             <ProductCard
               key={producto.id}
               producto={producto}
-              cantidad={obtenerCantidad(producto.id)}
             />
           ))}
         </div>
       </section>
-
-    
     </main>
   );
 }
