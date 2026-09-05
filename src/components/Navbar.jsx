@@ -40,7 +40,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-2xl items-center  justify-center px-1 py-1">
         <Link href="/">
           <Image
-            src="/branding/julianalogo.png"
+            src="/branding/julianalogo.webp"
             alt="Logo Juliana"
             width={300}
             height={300}
