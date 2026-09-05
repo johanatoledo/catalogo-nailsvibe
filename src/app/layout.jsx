@@ -27,9 +27,9 @@ export const metadata = {
   title: "JULIANA - NAIL ART ESTUDIO",
   description: "Estética Profesional, Manicure & Nail Art",
   icons: {
-    icon: "/branding/julianafavi.png", 
-    shortcut: "/branding/julianafavi.png",
-    apple: "/branding/julianafavi.png", 
+    icon: "/branding/julianafavi.webp", 
+    shortcut: "/branding/julianafavi.webp",
+    apple: "/branding/julianafavi.webp", 
   },
 };
 export const viewport = {
