@@ -26,6 +26,11 @@ const alexBrush = Alex_Brush({
 export const metadata = { 
   title: "JULIANA - NAIL ART ESTUDIO",
   description: "Estética Profesional, Manicure & Nail Art",
+  icons: {
+    icon: "/branding/julianafavi.png", 
+    shortcut: "/branding/julianafavi.png",
+    apple: "/branding/julianafavi.png", 
+  },
 };
 export const viewport = {
   width: "device-width",
