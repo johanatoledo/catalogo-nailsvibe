@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/ProductCard";
 import { productos } from "@/data/productos";
+import Footer from "@/components/Footer";
 
 export default function HomeMenuPage() {
   const [categoriaActiva, setCategoriaActiva] = useState("Todos");
@@ -74,6 +75,7 @@ export default function HomeMenuPage() {
           ))}
         </div>
       </section>
+     <Footer />
     </main>
   );
 }
