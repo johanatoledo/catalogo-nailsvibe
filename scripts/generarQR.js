@@ -1,9 +1,9 @@
 import QRCode from "qrcode";
 import path from "path";
 
-const urlMenu = "https://cafe-express.tonav-tech.online";
+const urlMenu = "https://juliana-catalogo.toledanadev.com/";
 
-const outputPath = path.join(process.cwd(), "public", "qr-menu.png");
+const outputPath = path.join(process.cwd(), "public", "qr-catalogojuliana.png");
 
 QRCode.toFile(outputPath, urlMenu, {
   width: 1000,
