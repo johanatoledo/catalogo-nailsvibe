@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`relative  w-full z-10 bg-juliana-gray/60 backdrop-blur-md transition-transform duration-400 ease-in-out ${
+      className={`relative  w-full z-10 bg-juliana-black/60 backdrop-blur-md transition-transform duration-400 ease-in-out ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >

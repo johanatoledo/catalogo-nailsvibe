@@ -18,7 +18,7 @@ export default function ProductCard({ producto, cantidad = 0,}) {
   
   return (
     <article className="group juliana-product-card juliana-fade-in">
-  <div className="relative h-60 w-full overflow-hidden ">
+  <div className="relative h-60 w-full overflow-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <Image
       src={producto.imagen}
       alt={producto.nombre}

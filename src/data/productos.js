@@ -23,7 +23,7 @@ export const productos = [
     descripcion:
       "Manicura y pedicura completa con esmalte semipermanente. Limado. Cutículas, masaje y aplicación de esmalte duradero.",
     precio: 45,
-    categoria: "Manicura Semipermanente",
+    categoria: "Nail Art",
     imagen: "/images/manicuraypedi.webp",
   },
   {
@@ -41,7 +41,7 @@ export const productos = [
     descripcion:
       "Preparación de uñas. Aplicación de gel y decoración creativa según tus gustos.",
     precio: 10.0,
-    categoria: "Uñas en gel",
+    categoria: "Uñas Acrílicas",
     imagen: "/images/unascerezas.webp",
   },
 
@@ -79,7 +79,7 @@ export const productos = [
     descripcion:
       "Preparación de uñas.Diseño de flores y piedras. Aplicación de esmalte y decoración creativa según tus preferencias.",
     precio: 120,
-    categoria: "Jelly Nails",
+    categoria: "Nail Art",
     imagen: "/images/unasflorrosada.webp",
   },
 
@@ -90,7 +90,7 @@ export const productos = [
     descripcion:
       "Preparación de uñas. Aplicación de esmalte y acabado elegante.",
     precio: 90,
-    categoria: "Polygel",
+    categoria: "Uñas Acrilicas",
     imagen: "/images/unasrojasdorado.webp",
   },
   {
@@ -108,7 +108,7 @@ export const productos = [
     descripcion:
       "Preparación de uñas, aplicación de esmalte y acabado profesional y natural.",
     precio: 50,
-    categoria: "Manicura Semipermanente",
+    categoria: "Uñas Acrilicas",
     imagen: "/images/unasbasicas.webp",
   },
   {

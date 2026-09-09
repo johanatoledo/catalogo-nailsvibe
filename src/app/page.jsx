@@ -20,7 +20,7 @@ export default function HomeMenuPage() {
   }, [categoriaActiva]);
 
   return (
-    <main className="min-h-screen bg-juliana-gray pb-20">
+    <main className="min-h-screen bg-juliana-black pb-20">
       <Navbar />
 
       <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
